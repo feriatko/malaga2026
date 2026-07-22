@@ -1,19 +1,16 @@
-# Málaga 2026 – moderná PWA
+# Dovolenka – Costa del Sol
 
-Moderný rodinný sprievodca pre GitHub Pages.
+Moderná mobilná PWA pre rodinnú dovolenku v Benalmádene.
 
-## Nasadenie
-Nahraj celý obsah do koreňa repozitára `feriatko/malaga2026` a potvrď commit. GitHub Actions stránku automaticky publikuje.
+## Funkcie
+- živé počasie cez Open-Meteo,
+- podrobný program a rodinné alternatívy,
+- kostoly a odkazy na aktuálne omše,
+- fotografie a navigácie,
+- filtrovanie miest,
+- odškrtávanie navštíveného,
+- uložený checklist,
+- svetlý/tmavý režim,
+- offline základ aplikácie.
 
-Adresa:
-https://feriatko.github.io/malaga2026/
-
-## Doprava
-Aplikácia je kompletne pripravená bez prenájmu auta. Používa:
-- pešie presuny,
-- vlak,
-- autobus,
-- taxi.
-
-## Aktualizácia
-Pri každom commite do vetvy `main` sa stránka automaticky znovu nasadí.
+Nahraj obsah ZIP balíka do koreňa GitHub repozitára a potvrď commit.
