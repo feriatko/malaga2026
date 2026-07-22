@@ -1,0 +1,431 @@
+
+<!DOCTYPE html>
+
+<html lang="sk">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Costa del Sol 2026 – prémiový rodinný sprievodca</title>
+<style>
+:root{
+  --navy:#0b3558; --blue:#0d6ea8; --sky:#eaf6fc; --sand:#fff7e8;
+  --gold:#e6a43a; --green:#2f7c67; --text:#24313a; --muted:#64737d;
+  --white:#fff; --line:#dbe5eb;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);
+background:linear-gradient(#eef8fd,#fff 25%,#f8f5ed);line-height:1.55}
+.hero{min-height:72vh;padding:54px 22px;display:flex;align-items:center;justify-content:center;
+text-align:center;color:#fff;background:
+linear-gradient(135deg,rgba(5,42,72,.94),rgba(13,110,168,.78)),
+radial-gradient(circle at 20% 20%,#5ac7df,transparent 35%),
+linear-gradient(160deg,#0c5c8c,#f1bd63)}
+.hero-inner{max-width:900px}.eyebrow{letter-spacing:.18em;text-transform:uppercase;font-weight:bold}
+h1{font-size:clamp(2.3rem,7vw,5rem);line-height:1.02;margin:.25em 0}
+.hero h2{font-weight:normal;margin:.3em 0 1em}
+.pills{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.pill{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.4);
+padding:8px 13px;border-radius:999px}
+nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);
+border-bottom:1px solid var(--line);padding:10px;display:flex;gap:8px;overflow:auto}
+nav a{white-space:nowrap;text-decoration:none;color:var(--navy);font-weight:bold;
+padding:8px 12px;border-radius:999px}
+nav a:hover{background:var(--sky)}
+main{max-width:1080px;margin:auto;padding:24px}
+.page{background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px;
+margin:24px 0;box-shadow:0 12px 35px rgba(17,55,79,.08)}
+.page h2{color:var(--navy);font-size:1.8rem;margin-top:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.card{border:1px solid var(--line);border-radius:16px;padding:18px;background:#fff}
+.card.soft{background:var(--sky)} .card.sand{background:var(--sand)}
+.tag{display:inline-block;background:var(--sky);color:var(--blue);padding:4px 9px;
+border-radius:999px;font-size:.83rem;font-weight:bold}
+.btn{display:inline-block;text-decoration:none;background:var(--blue);color:#fff;
+padding:10px 14px;border-radius:10px;font-weight:bold;margin:5px 5px 0 0}
+.btn.alt{background:var(--green)} .btn.gold{background:#a96500}
+.timeline{border-left:4px solid var(--gold);padding-left:20px}
+.day{padding:12px 0 20px}.day h3{margin:.2em 0;color:var(--navy)}
+.meta{color:var(--muted);font-size:.95rem}
+.route{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;
+text-align:center;background:var(--sky);padding:18px;border-radius:16px}
+.arrow{font-size:1.7rem;color:var(--blue)}
+table{width:100%;border-collapse:collapse}
+th,td{padding:12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:var(--navy);color:#fff}
+.notice{border-left:5px solid var(--gold);background:var(--sand);padding:15px;border-radius:10px}
+.checklist label{display:block;padding:7px 0}
+.small{font-size:.9rem;color:var(--muted)}
+.info-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:8px;margin:12px 0}
+.info-list span{display:block;background:#f4f8fa;border:1px solid var(--line);border-radius:10px;padding:9px;font-size:.92rem}
+.rating{font-weight:bold;color:#a96500}
+footer{text-align:center;color:var(--muted);padding:30px}
+@media(max-width:600px){main{padding:12px}.page{padding:20px}.route{grid-template-columns:1fr}.arrow{transform:rotate(90deg)}}
+@media print{
+ body{background:#fff}.hero{min-height:auto;padding:28mm 12mm}.hero h1{font-size:34pt}
+ nav{display:none}main{max-width:none;padding:0}.page{box-shadow:none;border:none;border-radius:0;
+ margin:0;padding:14mm;page-break-after:always;min-height:260mm}
+ .page:last-child{page-break-after:auto}.btn{border:1px solid #777;color:#000;background:#fff}
+ a{color:#000;text-decoration:none}footer{display:none}
+}
+
+.photo{margin:0 0 15px;border-radius:14px;overflow:hidden;background:#edf4f7;position:relative}
+.photo img{display:block;width:100%;height:210px;object-fit:cover;transition:transform .35s ease}
+.photo:hover img{transform:scale(1.025)}
+.photo figcaption{padding:7px 10px;font-size:.78rem;color:var(--muted);background:#f8fbfc}
+.photo figcaption a{color:var(--blue)}
+.hero{background-image:linear-gradient(135deg,rgba(5,42,72,.91),rgba(13,110,168,.68)),url("https://commons.wikimedia.org/wiki/Special:FilePath/Benalmadena_-_Puerto_Marina.jpg?width=1800");background-size:cover;background-position:center}
+@media(max-width:600px){.photo img{height:185px}}
+</style>
+
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0b6b78">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Costa del Sol 2026">
+<link rel="apple-touch-icon" href="icon-192.png">
+
+</head>
+<body>
+<header class="hero">
+<div class="hero-inner">
+<div class="eyebrow">Rodinná dovolenka</div>
+<h1>Costa del Sol 2026</h1>
+<h2>Benalmádena • Málaga • Mijas Pueblo</h2>
+<div class="pills">
+<span class="pill">13.–21. august 2026</span>
+<span class="pill">Hotel Best Siroco</span>
+<span class="pill">4 cestujúci</span>
+<span class="pill">pohodové tempo</span>
+</div>
+</div>
+</header>
+<nav>
+<a href="#prehled">Prehľad</a><a href="#lety">Lety</a><a href="#program">Program</a><a href="#benalmadena">Benalmádena</a><a href="#plaze">Pláže</a>
+<a href="#malaga">Málaga</a><a href="#vylety">Mijas</a><a href="#jedlo">Jedlo</a>
+<a href="#omsa">Omša</a><a href="#prakticke">Praktické</a>
+<a href="#doprava">Doprava</a></nav>
+<main>
+<section class="page" id="prehled">
+<h2>1. Rýchly prehľad cesty</h2>
+<div class="grid">
+<div class="card soft"><span class="tag">Základňa</span><h3>Best Siroco</h3>
+<p>Carril del Siroco, Benalmádena. Dobrá poloha na pláž, prístav aj vlak.</p>
+<a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel+Best+Siroco+Benalmadena" target="_blank">Hotel v Mapách</a>
+</div>
+<div class="card"><span class="tag">Tempo</span><h3>Bez naháňania</h3>
+<p>Striedanie výletu a oddychu. Najdlhší presun iba pri výlete do Rondy.</p>
+</div>
+<div class="card sand"><span class="tag">Auto</span><h3>Stačia 2 dni</h3>
+<p>Najpraktickejšie na Mijas Pueblo<div class="notice"><b>Zmena programu:</b> Výlet do <b>Rondy</b> sme vynechali. Cesta vedie dlhými kľukatými horskými úsekmi, čo nemusí byť príjemné pre rodičov. Namiesto toho odporúčame pohodový poldeň v Mijas Pueblo s kratším presunom a následný návrat na pláž alebo do Puerto Marina.</div><h3> a Rondu. Do Málagy je pohodlný vlak C1.</h3></p>
+</div>
+</div>
+<h3>Orientačná mapa presunov</h3>
+<div class="route"><b>MIJAS PUEBLO<br/><small>cca 25–35 min autom</small></b><span class="arrow">↔</span><b>BENALMÁDENA<br/><small>hotel</small></b></div>
+<br/>
+<div class="route"><b>MIJAS PUEBLO<br/><small>cca 25–30 min autom</small></b><span class="arrow">↔</span><b>BENALMÁDENA</b><span class="arrow">↔</span><b>MÁLAGA<br/><small>cca 30–40 min vlakom</small></b></div>
+<p class="small">Časy sú orientačné a závisia od premávky, vybranej stanice a parkovania.</p>
+</section>
+<section class="page" id="lety">
+<h2>✈️ Letové informácie</h2>
+<div class="grid">
+<div class="card soft">
+<h3>13. august 2026 – Odlet do Španielska</h3>
+<ul>
+<li><b>09:00</b> – odporúčaný príchod na letisko Viedeň</li>
+<li><b>11:00</b> – odlet Ryanair FR590</li>
+<li><b>14:25</b> – prílet Málaga</li>
+<li><b>15:00</b> – prevzatie batožiny</li>
+<li><b>15:30</b> – transfer do hotela Best Siroco (taxi/Bolt, vlak alebo prenajaté auto)</li>
+<li><b>16:00–16:30</b> – check‑in</li>
+<li><b>19:00</b> – odporúčaná večera v Puerto Marina</li>
+</ul>
+</div>
+<div class="card sand">
+<h3>21. august 2026 – Návrat domov</h3>
+<ul>
+<li><b>08:00</b> – raňajky</li>
+<li><b>09:00–10:30</b> – posledná prechádzka alebo kúpanie</li>
+<li><b>11:00</b> – check‑out z hotela</li>
+<li><b>11:15</b> – odchod na letisko</li>
+<li><b>12:15</b> – odlet Ryanair FR7496</li>
+<li><b>15:30</b> – prílet Viedeň</li>
+</ul>
+<p><b>Poznámka:</b> Pri prenajatom aute si nechajte rezervu 20–30 minút na jeho vrátenie.</p>
+</div>
+</div>
+</section>
+<section class="page" id="program">
+<h2>2. Program po dňoch</h2>
+<div class="timeline">
+<div class="day"><h3>13. august – príchod a zoznámenie s okolím</h3>
+<p>Ubytovanie, pokojná prechádzka smerom k Puerto Marina a večera pri mori.</p></div>
+<div class="day"><h3>14. august – pláž a bazén</h3>
+<p>Voľný deň po ceste. Večer promenáda alebo odporúčaná večera v Torremolinos.</p></div>
+<div class="day"><h3>15. august – Benalmádena a sviatok Nanebovzatia Panny Márie</h3>
+<p>Parque de la Paloma, oddych, neskôr Castillo de Colomares. Program omší overiť deň vopred.</p></div>
+<div class="day"><h3>16. august – svätá omša a Málaga</h3>
+<p>Ranná omša, obed a popoludňajší vlak do centra Málagy. Pokojná trasa bez výstupu na Gibralfaro.</p></div>
+<div class="day"><h3>17. august – oddych</h3>
+<p>Pláž, bazén a voľný program. Dcéra môže skúsiť paddleboard alebo vodný bicykel.</p></div>
+<div class="day"><h3>18. august – Mijas Pueblo</h3>
+<p>Krátky výlet autom, vyhliadky, historické uličky a obed. Návrat pred najväčšou horúčavou.</p></div>
+<div class="day"><h3>19. august – voľný deň pri mori</h3>
+<p>Pomalé ráno, kúpanie na Playa Santa Ana alebo Malapesquera, popoludní bazén a večer Puerto Marina.</p></div>
+<div class="day"><h3>20. august – posledný deň pri mori</h3>
+<p>Kúpanie, posledné nákupy a spoločná rozlúčková večera.</p></div>
+<div class="day"><h3>21. august – odchod</h3>
+<p>Pokojné ráno, check-out a presun na letisko podľa času odletu.</p></div>
+</div>
+</section>
+<section class="page" id="benalmadena">
+<h2>3. Benalmádena – program bez dlhých presunov</h2>
+<p>Pri miestach v Benalmádene je tlačidlo <b>Navigovať pešo z hotela</b> nastavené priamo z hotela Best Siroco. Uvedené časy sú orientačné.</p>
+<div class="grid">
+<div class="card">
+<figure class="photo"><img alt="Puerto Marina v Benalmádene" loading="lazy" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Benalmadena%20-%20Puerto%20Marina.jpg?width=1200"/><figcaption>Fotografia: <a href="https://commons.wikimedia.org/wiki/File:Benalmadena_-_Puerto_Marina.jpg" rel="noopener" target="_blank">Wikimedia Commons – zdroj a licencia</a></figcaption></figure><h3>Puerto Marina</h3>
+<div class="info-list">
+<span>🚶 Z hotela: <b>10–15 min</b></span>
+<span>⏱️ Návšteva: <b>1,5–3 h</b></span>
+<span>🌅 Najlepšie: <b>podvečer</b></span>
+<span>👨‍👩‍👧‍👦 Náročnosť: <b>ľahká</b></span>
+</div>
+<p>Večerná prechádzka, obchody, zmrzlina a veľký výber reštaurácií.</p>
+<a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel+Best+Siroco+Benalmadena&amp;destination=Puerto+Marina+Benalmadena&amp;travelmode=walking" target="_blank">🚶 Navigovať pešo z hotela</a>
+</div>
+<div class="card">
+<figure class="photo"><img alt="Parque de la Paloma" loading="lazy" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Parque%20de%20la%20Paloma%201.JPG?width=1200"/><figcaption>Fotografia: <a href="https://commons.wikimedia.org/wiki/File:Parque_de_la_Paloma_1.JPG" rel="noopener" target="_blank">Wikimedia Commons – zdroj a licencia</a></figcaption></figure><h3>Parque de la Paloma</h3>
+<div class="info-list">
+<span>🚶 Z hotela: <b>15–20 min</b></span>
+<span>⏱️ Návšteva: <b>1–2 h</b></span>
+<span>🌤️ Najlepšie: <b>ráno</b></span>
+<span>👨‍👩‍👧‍👦 Náročnosť: <b>ľahká</b></span>
+</div>
+<p>Príjemný park na nenáročnú prechádzku a oddych v tieni.</p>
+<a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel+Best+Siroco+Benalmadena&amp;destination=Parque+de+la+Paloma+Benalmadena&amp;travelmode=walking" target="_blank">🚶 Navigovať pešo z hotela</a>
+</div>
+<div class="card">
+<figure class="photo"><img alt="Castillo de Colomares" loading="lazy" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Castillo%20de%20Colomares.jpg?width=1200"/><figcaption>Fotografia: <a href="https://commons.wikimedia.org/wiki/File:Castillo_de_Colomares.jpg" rel="noopener" target="_blank">Wikimedia Commons – zdroj a licencia</a></figcaption></figure><h3>Castillo de Colomares</h3>
+<div class="info-list">
+<span>🚶 Pešo: <b>55–70 min</b></span>
+<span>🚕 Taxi: <b>10–15 min</b></span>
+<span>⏱️ Návšteva: <b>45–60 min</b></span>
+<span>👨‍👩‍👧‍👦 Náročnosť: <b>stredná</b></span>
+</div>
+<p>Fotogenická stavba a výhľady. Pre rodičov odporúčame taxi; pešia trasa je uvedená len ako navigačná možnosť.</p>
+<a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel+Best+Siroco+Benalmadena&amp;destination=Castillo+de+Colomares&amp;travelmode=walking" target="_blank">🚶 Navigovať pešo z hotela</a>
+</div>
+<div class="card sand">
+<h3>Odporúčaný denný rytmus</h3>
+<p><b>09:00–12:00</b> pláž alebo výlet<br/>
+<b>12:00–17:00</b> obed, bazén a oddych<br/>
+<b>18:00–21:30</b> promenáda, prístav alebo večera</p>
+</div>
+</div>
+</section>
+<section class="page" id="plaze">
+<h2>4. Najkrajšie pláže pre našu rodinu</h2>
+<p>Najpraktickejšie sú pláže v pešej vzdialenosti. Na pokojnejšiu vzdialenejšiu pláž sa oplatí využiť vlak alebo taxi. Časy presunov sú orientačné.</p><figure class="photo"><img alt="Pobrežie Benalmádeny" loading="lazy" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Benalm%C3%A1dena%20%28M%C3%A1laga%29.jpg?width=1400"/><figcaption>Ilustračná fotografia pobrežia: <a href="https://commons.wikimedia.org/wiki/File:Benalmádena_(Málaga).jpg" rel="noopener" target="_blank">Wikimedia Commons – zdroj a licencia</a></figcaption></figure>
+<div class="grid">
+<div class="card soft">
+<span class="tag">Najlepšia na bežné kúpanie</span>
+<h3>Playa de Santa Ana <span class="rating">★★★★★</span></h3>
+<div class="info-list">
+<span>🚶 Z hotela: <b>10–15 min</b></span>
+<span>🏖️ Pobyt: <b>2–4 h</b></span>
+<span>🌊 Vstup: <b>pozvoľný</b></span>
+<span>👵 Pre rodičov: <b>výborná</b></span>
+</div>
+<p>Dobré zázemie, promenáda, reštaurácie a príjemný prístup k moru.</p>
+<a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel+Best+Siroco+Benalmadena&amp;destination=Playa+de+Santa+Ana+Benalmadena&amp;travelmode=walking" target="_blank">🚶 Navigovať pešo z hotela</a>
+</div>
+<div class="card">
+<span class="tag">Pláž + Puerto Marina</span>
+<h3>Playa Malapesquera <span class="rating">★★★★★</span></h3>
+<div class="info-list">
+<span>🚶 Z hotela: <b>10–15 min</b></span>
+<span>🏖️ Pobyt: <b>2–4 h</b></span>
+<span>🍴 Večera: <b>Puerto Marina</b></span>
+<span>👵 Pre rodičov: <b>výborná</b></span>
+</div>
+<p>Ideálna, keď chcete spojiť kúpanie s prechádzkou alebo večerou v prístave.</p>
+<a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel+Best+Siroco+Benalmadena&amp;destination=Playa+Malapesquera+Benalmadena&amp;travelmode=walking" target="_blank">🚶 Navigovať pešo z hotela</a>
+</div>
+<div class="card sand">
+<span class="tag">Najkrajšia kulisa</span>
+<h3>Playa de Bil Bil <span class="rating">★★★★☆</span></h3>
+<div class="info-list">
+<span>🚶 Z hotela: <b>20–25 min</b></span>
+<span>🏖️ Pobyt: <b>2–3 h</b></span>
+<span>🌅 Najlepšie: <b>podvečer</b></span>
+<span>📷 Bonus: <b>Castillo Bil Bil</b></span>
+</div>
+<p>Pekná na fotografie, večernú prechádzku a západ slnka.</p>
+<a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel+Best+Siroco+Benalmadena&amp;destination=Playa+de+Bil+Bil+Benalmadena&amp;travelmode=walking" target="_blank">🚶 Navigovať pešo z hotela</a>
+</div>
+<div class="card">
+<span class="tag">Pokojnejší plážový deň</span>
+<h3>Playa de Carvajal <span class="rating">★★★★★</span></h3>
+<div class="info-list">
+<span>🚆 Presun: <b>30–45 min</b></span>
+<span>🏖️ Pobyt: <b>3–5 h</b></span>
+<span>🌊 Atmosféra: <b>pokojnejšia</b></span>
+<span>👵 Pre rodičov: <b>dobrá</b></span>
+</div>
+<p>Vhodná na poldeň mimo najrušnejšej časti Benalmádeny. Praktickejší je vlak C1 alebo taxi.</p>
+<a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel+Best+Siroco+Benalmadena&amp;destination=Playa+de+Carvajal+Fuengirola&amp;travelmode=walking" target="_blank">🚶 Zobraziť pešiu trasu z hotela</a>
+</div>
+<div class="card">
+<span class="tag">Voliteľný vzdialenejší výlet</span>
+<h3>Playa de Burriana – Nerja <span class="rating">★★★★★</span></h3>
+<div class="info-list">
+<span>🚗 Autom: <b>1 h 5–20 min</b></span>
+<span>🏖️ Pobyt: <b>3–5 h</b></span>
+<span>📅 Celý výlet: <b>7–9 h</b></span>
+<span>👵 Náročnosť: <b>stredná</b></span>
+</div>
+<p>Krásna pláž, ale vzhľadom na vzdialenosť ju zaradiť iba ako samostatný celodenný výlet.</p>
+<a class="btn gold" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel+Best+Siroco+Benalmadena&amp;destination=Playa+de+Burriana+Nerja&amp;travelmode=driving" target="_blank">🚗 Navigovať autom z hotela</a>
+</div>
+</div>
+<div class="notice"><b>Náš výber:</b> Santa Ana na bežné kúpanie, Malapesquera pri večeri v Puerto Marina a Bil Bil na podvečernú prechádzku. Carvajal zaradiť, keď budete chcieť zmenu a pokojnejšie prostredie.</div>
+</section>
+<section class="page" id="malaga"><h2>5. Celodenný výlet do Málagy</h2>
+<div class="notice"><b>Presun:</b> 🚶12 min na stanicu • 🚆25 min vlak C1 • 🚶8 min do centra. Celkom približne <b>45 min</b>.</div>
+<div class="grid">
+<div class="card"><figure class="photo"><img alt="Calle Larios v Málage" loading="lazy" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Calle%20Larios%2C%20M%C3%A1laga%2001.jpg?width=1200"/><figcaption>Fotografia: <a href="https://commons.wikimedia.org/wiki/File:Calle_Larios,_Málaga_01.jpg" rel="noopener" target="_blank">Wikimedia Commons – zdroj a licencia</a></figcaption></figure><h3>Calle Larios</h3><p>30–45 min • ranná káva • nákupy.</p><p><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Calle+Larios+Malaga" target="_blank">📍 Zobraziť na mape</a></p></div>
+<div class="card"><figure class="photo"><img alt="Katedrála v Málage" loading="lazy" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Catedral%20de%20M%C3%A1laga%203.jpg?width=1200"/><figcaption>Fotografia: <a href="https://commons.wikimedia.org/wiki/File:Catedral_de_Málaga_3.jpg" rel="noopener" target="_blank">Wikimedia Commons – zdroj a licencia</a></figcaption></figure><h3>Katedrála</h3><p>45–60 min • vhodná aj pre seniorov.</p><p><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Malaga+Cathedral" target="_blank">📍 Zobraziť na mape</a></p></div>
+<div class="card"><figure class="photo"><img alt="Rímske divadlo a Alcazaba" loading="lazy" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Malaga%20Spain%20Alcazaba%20Teatro.jpg?width=1200"/><figcaption>Fotografia: <a href="https://commons.wikimedia.org/wiki/File:Malaga_Spain_Alcazaba_Teatro.jpg" rel="noopener" target="_blank">Wikimedia Commons – zdroj a licencia</a></figcaption></figure><h3>Rímske divadlo + Alcazaba</h3><p>20 min + 60–90 min (voliteľne).</p><p><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Roman+Theatre+Malaga" target="_blank">📍 Rímske divadlo</a> <a class="btn gold" href="https://www.google.com/maps/search/?api=1&amp;query=Alcazaba+Malaga" target="_blank">🏰 Alcazaba</a></p></div>
+<div class="card"><figure class="photo"><img alt="Muelle Uno" loading="lazy" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Christmas%20Market%20in%20Muelle%20Uno.jpg?width=1200"/><figcaption>Fotografia: <a href="https://commons.wikimedia.org/wiki/File:Christmas_Market_in_Muelle_Uno.jpg" rel="noopener" target="_blank">Wikimedia Commons – zdroj a licencia</a></figcaption></figure><h3>Muelle Uno</h3><p>1–2 hod • promenáda • lode • zmrzlina.</p><p><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Muelle+Uno+Malaga" target="_blank">📍 Zobraziť na mape</a></p></div>
+<div class="card"><figure class="photo"><img alt="Playa de la Malagueta" loading="lazy" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Beach%20in%20Malaga%20Spain%20-%20Playa%20de%20la%20Malagueta.JPG?width=1200"/><figcaption>Fotografia: <a href="https://commons.wikimedia.org/wiki/File:Beach_in_Malaga_Spain_-_Playa_de_la_Malagueta.JPG" rel="noopener" target="_blank">Wikimedia Commons – zdroj a licencia</a></figcaption></figure><h3>Playa La Malagueta</h3><p>1–2 hod pri horúcom počasí.</p><p><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Playa+La+Malagueta" target="_blank">📍 Zobraziť na mape</a></p></div>
+<div class="card"><figure class="photo"><img alt="Mercado Central de Atarazanas" loading="lazy" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/M%C3%A1laga%20-%20Mercado%20Central%20de%20Atarazanas%203.jpg?width=1200"/><figcaption>Fotografia: <a href="https://commons.wikimedia.org/wiki/File:Málaga_-_Mercado_Central_de_Atarazanas_3.jpg" rel="noopener" target="_blank">Wikimedia Commons – zdroj a licencia</a></figcaption></figure><h3>Mercado Atarazanas</h3><p>45–60 min • odporúčaný obed.</p><p><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Mercado+Central+de+Atarazanas+Malaga" target="_blank">📍 Zobraziť na mape</a></p></div>
+<div class="card soft"><h3>Odporúčané podniky</h3><ul><li>El Pimpi</li><li>Casa Lola</li><li>Casa Mira</li></ul></div>
+<div class="card sand"><h3>Harmonogram</h3><p>09:00 hotel → 10:00 Calle Larios → 10:45 Katedrála → 11:45 Divadlo → 12:15 Alcazaba → 14:00 obed → 15:30 Muelle Uno → 17:00 Malagueta → 18:30 návrat → 19:30 hotel.</p></div>
+</div>
+<p><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel+Best+Siroco+Benalmadena&amp;destination=Estacion+Arroyo+de+la+Miel&amp;travelmode=walking" target="_blank">🚶 Navigovať pešo na stanicu</a></p>
+</section>
+<section class="page" id="vylety">
+<h2>6. Odporúčaný výlet: Mijas Pueblo</h2>
+<div class="grid">
+<div class="card soft"><figure class="photo"><img alt="Ulička v Mijas Pueblo" loading="lazy" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Mijas%20Pueblo%20Street.jpg?width=1200"/><figcaption>Fotografia: <a href="https://commons.wikimedia.org/wiki/File:Mijas_Pueblo_Street.jpg" rel="noopener" target="_blank">Wikimedia Commons – zdroj a licencia</a></figcaption></figure><h3>Mijas Pueblo</h3>
+<p><b>Odchod:</b> okolo 9:00<br/><b>Dĺžka:</b> približne pol dňa<br/><b>Náročnosť:</b> ľahká až stredná</p>
+<p>Zaparkovať čo najbližšie k centru, prejsť hlavné vyhliadky, dať si obed a vrátiť sa na hotel.</p>
+<a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel+Best+Siroco+Benalmadena&amp;destination=Mijas+Pueblo&amp;travelmode=driving" target="_blank">Trasa autom</a>
+</div>
+<div class="card sand">
+</div>
+<div class="notice"><b>Dôležité:</b> cesta do Rondy môže byť kľukatá. Pri citlivosti na serpentíny je vhodné sadnúť si dopredu, dať si ľahké raňajky a robiť prestávku podľa potreby.</div>
+</div></section>
+<section class="page" id="jedlo">
+<h2>7. Kde sa najesť</h2>
+<div class="card sand">
+<span class="tag">Nové odporúčanie</span>
+<h3>Bodega Quitapenas – Torremolinos</h3>
+<p>Tradičná andalúzska bodega na adrese <b>Cuesta del Tajo 3</b>. Podľa oficiálnej stránky je otvorená denne približne <b>12:00–17:00 a 19:00–00:00</b> a neprijíma rezervácie.</p>
+<p><b>Kedy zaradiť:</b> večera 14. augusta alebo obed pri samostatnom výlete do Torremolinos.</p>
+<p><b>Praktický tip:</b> prísť skôr, najmä pri večeri, keďže sa nedá rezervovať.</p>
+<div class="info-list"><span>🚆 Verejná doprava: <b>25–35 min</b></span><span>🚕 Taxi: <b>15–20 min</b></span><span>🍽️ Večera: <b>1,5–2 h</b></span></div><a class="btn gold" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel+Best+Siroco+Benalmadena&amp;destination=Bodega+Quitapenas+Cuesta+del+Tajo+3+Torremolinos&amp;travelmode=walking" target="_blank">🚶 Zobraziť pešiu trasu z hotela</a>
+<a class="btn alt" href="https://quitapenastorremolinos.com/en/bodega-quitapenas-torremolinos-home/" target="_blank">Oficiálna stránka</a>
+</div>
+<div class="grid">
+<div class="card"><figure class="photo"><img alt="Puerto Marina v Benalmádene" loading="lazy" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Benalmadena%20-%20Puerto%20Marina.jpg?width=1200"/><figcaption>Fotografia: <a href="https://commons.wikimedia.org/wiki/File:Benalmadena_-_Puerto_Marina.jpg" rel="noopener" target="_blank">Wikimedia Commons – zdroj a licencia</a></figcaption></figure><h3>Puerto Marina</h3><p>Najpraktickejšie na večeru – dostupné verejnou dopravou alebo krátkou jazdou taxi/Bolt. Veľký výber kuchýň.</p></div>
+<div class="card"><h3>Málaga</h3><p>Na obed zvoliť podnik v historickom centre, aby sa minimalizovala chôdza.</p></div>
+<div class="card">
+</div>
+</div></section>
+<section class="page" id="omsa">
+<h2>8. Katolícka svätá omša</h2>
+<div class="card soft">
+<h3>Parroquia Virgen del Carmen – Benalmádena</h3>
+<p>Aktuálne zverejnený bežný rozpis uvádza v nedeľu omše o <b>10:30, 12:00 a 19:00</b>. V sobotu a v predvečer sviatku býva omša o 19:00.</p>
+<p><b>Odporúčanie:</b> zvoliť nedeľu 16. augusta o 10:30 alebo 12:00. Sviatočný program 15. augusta si overiť na farskej stránke krátko pred cestou.</p>
+<div class="info-list"><span>🚶 Z hotela: <b>15–20 min</b></span><span>⏱️ Omša: <b>približne 60 min</b></span></div><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel+Best+Siroco+Benalmadena&amp;destination=Parroquia+Virgen+del+Carmen+Benalmadena&amp;travelmode=walking" target="_blank">🚶 Navigovať pešo z hotela</a>
+<a class="btn alt" href="https://parroquiacarmenbenalmadena.com/parroquia-virgen-carmen-benalmadena/horarios/" target="_blank">Aktuálne časy omší</a>
+</div>
+</section>
+
+<section class="page" id="doprava">
+<h2>🚆 Verejná doprava</h2>
+
+<div class="grid">
+<div class="card soft">
+<h3>Najvýhodnejší spôsob cestovania</h3>
+<p>Na pobyt v Benalmádene a výlet do Málagy sa najviac oplatí <b>dobíjateľná karta Consorcio de Transporte</b>. Ide o elektronickú peňaženku so zľavneným cestovným pre autobusy, metro a vlak Cercanías C1.</p>
+<ul>
+<li>💳 Dobitie odporúčame: <b>10–20 €</b></li>
+<li>🚆 Platí aj na linke C1 Benalmádena – Málaga.</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Kde ju kúpiť?</h3>
+<ul>
+<li>🏪 predajne Estanco (trafiky)</li>
+<li>🚉 vybrané železničné stanice</li>
+<li>🚌 predajné miesta Consorcio</li>
+</ul>
+<p>Po kúpe ju stačí dobíjať podľa potreby.</p>
+</div>
+
+<div class="card">
+<h3>Cesta do Málagy</h3>
+<ul>
+<li>🚶 Hotel → Arroyo de la Miel: <b>12 min</b></li>
+<li>🚆 Vlak C1: <b>25 min</b></li>
+<li>🚶 Stanica → centrum: <b>8 min</b></li>
+<li>⏱️ Celkom: <b>45 min</b></li>
+</ul>
+<a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Hotel+Best+Siroco+Benalmadena&destination=Estacion+Arroyo+de+la+Miel&travelmode=walking">🚶 Navigovať na stanicu</a>
+</div>
+
+<div class="card sand">
+<h3>ZŤP a seniori</h3>
+<p>❗ Pre turistov zo Slovenska nie je všeobecná zľava na základe slovenského preukazu ZŤP. Väčšina zvýhodnení je určená pre miestnych držiteľov personalizovaných kariet.</p>
+<p>👴 Otec (76 rokov) môže pri dlhších cestách po Španielsku zvážiť kartu <b>Renfe Tarjeta Dorada</b>, na tento pobyt sa však pravdepodobne neoplatí.</p>
+</div>
+</div>
+
+<div class="notice">
+<b>Odporúčanie pre náš pobyt</b><br>
+✅ Málagu absolvovať vlakom C1.<br>
+✅ Benalmádenu prechádzať prevažne pešo.<br>
+✅ Na dlhšie presuny využiť Bolt alebo taxi.<br>
+✅ Auto prenajať iba na výlet do Mijas Pueblo.
+</div>
+</section>
+
+<section class="page" id="prakticke">
+<h2>9. Praktické informácie a checklist</h2>
+<div class="grid">
+<div class="card"><h3>Doprava</h3>
+<ul><li>Do Málagy vlak C1.</li><li>V rámci Benalmádeny, Torremolinos a na kratšie vzdialenosti preferovať verejnú dopravu alebo taxi/Bolt.</li><li>Na Mijas Pueblo a Rondu prenajať auto.</li><li>Na kratšie presuny využívať verejnú dopravu (vlak C1 alebo autobus) alebo taxi/Bolt podľa potreby.</li></ul></div>
+<div class="card"><h3>Pre rodičov</h3>
+<ul><li>Voda a pokrývka hlavy.</li><li>Program hlavne ráno a podvečer.</li><li>Vyhýbať sa dlhým schodom a prudkým zostupom.</li></ul></div>
+<div class="card"><h3>Do mobilu</h3>
+<ul><li>Offline mapy Google Maps.</li><li>Fotka pasov/OP uložená bezpečne.</li><li>Kontakty na hotel a poisťovňu.</li></ul></div>
+</div>
+<div class="card checklist sand">
+<h3>Checklist pred odchodom</h3>
+<label>□ doklady a cestovné poistenie</label>
+<label>□ lieky a zoznam užívaných liekov</label>
+<label>□ európske preukazy zdravotného poistenia</label>
+<label>□ opaľovací krém, klobúk, pohodlná obuv</label>
+<label>□ vodičský preukaz a podmienky prenájmu auta</label>
+<label>□ potvrdenie hotela a letenky</label>
+</div>
+<p class="small">Sprievodca je orientačný. Otváracie hodiny, omše, premávku a cestovné poriadky skontrolujte krátko pred návštevou.</p>
+<div class="notice"><b>Fotografie:</b> Obrázky sa načítavajú externe z Wikimedia Commons, takže HTML zostáva malé. Na ich zobrazenie je potrebné internetové pripojenie; pod každou fotografiou je odkaz na zdroj a licenciu.</div></section>
+</main>
+<footer>Costa del Sol 2026 • rodinný sprievodca pripravený na mobil aj tlač</footer>
+
+<script>
+if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./service-worker.js')
+      .catch(err => console.warn('Service worker registration failed:', err));
+  });
+}
+</script>
+
+</body>
+</html>

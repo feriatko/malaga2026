@@ -1,0 +1,16 @@
+{
+  "name": "Costa del Sol 2026 – rodinný sprievodca",
+  "short_name": "Málaga 2026",
+  "description": "Interaktívny rodinný sprievodca pre pobyt v Benalmádene a výlety po Costa del Sol.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f4ed",
+  "theme_color": "#0b6b78",
+  "lang": "sk",
+  "icons": [
+    {"src": "./icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "./icon-512.png", "sizes": "512x512", "type": "image/png"},
+    {"src": "./icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}
