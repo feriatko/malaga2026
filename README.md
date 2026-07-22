@@ -1,14 +1,19 @@
-# Málaga 2026 – rodinný sprievodca
+# Málaga 2026 – moderná PWA
 
-Statická PWA pre cestu na Costa del Sol, publikovaná cez GitHub Pages.
+Moderný rodinný sprievodca pre GitHub Pages.
 
-## Prvé nasadenie
+## Nasadenie
+Nahraj celý obsah do koreňa repozitára `feriatko/malaga2026` a potvrď commit. GitHub Actions stránku automaticky publikuje.
 
-1. Nahraj celý obsah ZIP balíka do koreňa repozitára `feriatko/malaga2026`.
-2. Otvor **Settings → Pages**.
-3. V časti **Build and deployment → Source** vyber **GitHub Actions**.
-4. Otvor **Actions** a počkaj na dokončenie workflow `Deploy GitHub Pages`.
+Adresa:
+https://feriatko.github.io/malaga2026/
 
-Výsledná adresa: `https://feriatko.github.io/malaga2026/`
+## Doprava
+Aplikácia je kompletne pripravená bez prenájmu auta. Používa:
+- pešie presuny,
+- vlak,
+- autobus,
+- taxi.
 
-Každý ďalší push do vetvy `main` automaticky spustí nové nasadenie.
+## Aktualizácia
+Pri každom commite do vetvy `main` sa stránka automaticky znovu nasadí.
