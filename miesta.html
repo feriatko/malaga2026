@@ -4,9 +4,26 @@
 <title>Miesta · Dovolenka</title>
 <link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./assets/icon-192.png"><link rel="stylesheet" href="./assets/style.css">
 </head><body data-page="places"><header class="topbar">
-<a class="brand" href="index.html"><span class="brand-icon">D</span><span><b>Dovolenka</b><small>Costa del Sol · 13.–21. 8. 2026</small></span></a>
+<a class="brand" href="./index.html"><span class="brand-icon">D</span><span><b>Dovolenka</b><small>Costa del Sol · 13.–21. 8. 2026</small></span></a>
+
+<nav class="top-nav" aria-label="Horná navigácia">
+  <a href="./index.html" data-top-page="home">Domov</a>
+  <a href="./program.html" data-top-page="program">Program</a>
+  <a href="./miesta.html" data-top-page="places">Miesta</a>
+  <a href="./jedlo.html" data-top-page="food">Jedlo</a>
+  <a href="./prakticke.html" data-top-page="practical">Praktické</a>
+</nav>
 <div class="top-actions"><button id="themeBtn" aria-label="Prepnúť vzhľad">◐</button><button id="installBtn" hidden>Pridať do mobilu</button></div>
-</header><main><section class="section" id="mijas-guide">
+</header><main>
+<section class="page-head">
+  <div>
+    <span class="overline">Dovolenka</span>
+    <h1>Miesta</h1>
+    <p>Pamiatky, kostoly, vyhliadky a celé pešie okruhy s navigáciou z hotela.</p>
+  </div>
+  <a href="./index.html" class="page-home-link">← Domov</a>
+</section>
+<section class="section" id="mijas-guide">
 <div class="section-title"><div><span class="overline">Pueblo Blanco</span><h2>Mijas Pueblo – celý sprievodca</h2></div><span class="pill">krátka / dlhá verzia</span></div>
 <div class="guide-hero"><div><span class="eyebrow">Biele domčeky, kostoly a výhľady</span><h3>Najkrajší poldeň mimo pobrežia</h3><p>Začnite na Plaza Virgen de la Peña, kde môže taxi vysadiť celú rodinu. Odtiaľ sa dá vybrať krátky alebo kompletný okruh.</p></div></div>
 <div class="variant-grid">
@@ -16,7 +33,16 @@
 <div class="info-strip"><div><b>Najlepší čas</b><span>8:30–13:30 alebo po 17:30</span></div><div><b>Obed</b><span>Plaza de la Constitución</span></div><div><b>Stretnutie</b><span>Plaza Virgen de la Peña</span></div><div><b>Náročnosť</b><span>Mierne svahy a dlažba</span></div></div>
 </section><section class="section" id="places">
 <div class="section-title"><div><span class="overline">Objavovanie</span><h2>Miesta a pamiatky</h2></div><div class="filters"><button class="filter active" data-filter="all">Všetko</button><button class="filter" data-filter="Benalmádena">Benalmádena</button><button class="filter" data-filter="Málaga">Málaga</button><button class="filter" data-filter="Mijas">Mijas</button></div></div>
-<div class="place-grid">
+
+<div class="places-toolbar">
+  <label class="search-box">
+    <span>⌕</span>
+    <input id="placeSearch" type="search" placeholder="Hľadať miesto, kostol, výhľad…" autocomplete="off">
+  </label>
+  <a class="compact-action" href="#mijas-guide">Mijas okruhy</a>
+  <a class="compact-action" href="#churches">Kostoly</a>
+</div>
+<div id="searchEmpty" class="search-empty" hidden>Nenašli sa žiadne zodpovedajúce miesta.</div><div class="place-grid">
 <article class="place-card" data-group="Benalmádena" data-id="puerto-marina">
 <div class="place-image" style="background-image:linear-gradient(0deg,rgba(3,31,39,.82),rgba(3,31,39,.05)),url('https://commons.wikimedia.org/wiki/Special:Redirect/file/Benalmadena%20-%20Puerto%20Marina.jpg?width=1600'),url('assets/images/marina.jpg')">
 <button class="visited" data-visited="puerto-marina" aria-label="Označiť ako navštívené"><span>✓</span></button>
@@ -77,9 +103,9 @@
 </div>
 <div class="route-banner"><div><span>Odporúčaný kostolný okruh v Málage</span><h3>Katedrála → Iglesia del Sagrario → Iglesia de Santiago → Plaza de la Merced</h3><p>Krátka a obsahovo bohatá trasa v historickom centre. Pri únave sa dá ukončiť po katedrále.</p></div><a class="btn light-btn" href="https://www.google.com/maps/dir/?api=1&origin=Catedral+de+Malaga&destination=Plaza+de+la+Merced+Malaga&waypoints=Iglesia+del+Sagrario+Malaga%7CIglesia+de+Santiago+Malaga&travelmode=walking" target="_blank">Otvoriť trasu</a></div>
 </section></main><footer><b>Dovolenka</b><span>Costa del Sol · rodinná PWA bez auta</span></footer><nav class="screen-nav">
-<a href="index.html" data-page="home">🏠<span>Domov</span></a>
-<a href="program.html" data-page="program">📅<span>Program</span></a>
-<a href="miesta.html" data-page="places">🗺️<span>Miesta</span></a>
-<a href="jedlo.html" data-page="food">🍽️<span>Jedlo</span></a>
-<a href="prakticke.html" data-page="practical">🧳<span>Praktické</span></a>
+<a href="./index.html" data-page="home">🏠<span>Domov</span></a>
+<a href="./program.html" data-page="program">📅<span>Program</span></a>
+<a href="./miesta.html" data-page="places">🗺️<span>Miesta</span></a>
+<a href="./jedlo.html" data-page="food">🍽️<span>Jedlo</span></a>
+<a href="./prakticke.html" data-page="practical">🧳<span>Praktické</span></a>
 </nav><script src="./assets/app.js"></script></body></html>

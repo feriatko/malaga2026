@@ -38,3 +38,37 @@ body{padding-bottom:84px}.screen-nav{position:fixed;z-index:1000;left:50%;bottom
 .guide-hero{min-height:300px;border-radius:26px;padding:36px;display:flex;align-items:end;color:#fff;background-image:linear-gradient(0deg,rgba(3,31,39,.88),rgba(3,31,39,.08)),url('assets/images/virgen-pena.jpg');background-position:center;background-size:cover}.guide-hero h3{font-size:clamp(1.8rem,4vw,3.2rem);margin:.4rem 0}.variant-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}.variant-grid article{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:26px}.variant-grid ol{padding-left:22px;line-height:1.8}.variant-label{font-size:.76rem;text-transform:uppercase;font-weight:900;color:var(--brand)}.info-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:18px;background:var(--line);border-radius:20px;overflow:hidden}.info-strip div{background:var(--paper);padding:18px}.info-strip b,.info-strip span{display:block}.info-strip span{font-size:.84rem;color:var(--muted);margin-top:5px}
 .phrase-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.phrase-grid article{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:24px}.phrase-grid p{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:12px 0;border-bottom:1px solid var(--line);margin:0}.phrase-grid small{grid-column:1/-1;color:var(--muted)}
 @media(max-width:900px){.decision-grid,.tips-grid{grid-template-columns:1fr 1fr}.info-strip{grid-template-columns:1fr 1fr}}@media(max-width:650px){.variant-grid,.phrase-grid,.decision-grid,.tips-grid,.info-strip{grid-template-columns:1fr}.guide-hero{min-height:260px;padding:24px}.screen-nav{bottom:8px}.top-actions #installBtn{display:none!important}}
+
+/* v7 application navigation */
+.topbar{gap:24px}
+.top-nav{display:flex;align-items:center;gap:5px;margin-left:auto}
+.top-nav a{padding:9px 13px;border-radius:999px;text-decoration:none;color:var(--muted);font-size:.86rem;font-weight:850;transition:.2s ease}
+.top-nav a:hover{background:var(--aqua);color:var(--brand)}
+body[data-page="home"] .top-nav [data-top-page="home"],
+body[data-page="program"] .top-nav [data-top-page="program"],
+body[data-page="places"] .top-nav [data-top-page="places"],
+body[data-page="food"] .top-nav [data-top-page="food"],
+body[data-page="practical"] .top-nav [data-top-page="practical"]{
+  background:var(--deep);color:#fff
+}
+.page-head{max-width:1220px;margin:0 auto;padding:46px 20px 10px;display:flex;justify-content:space-between;align-items:end;gap:24px}
+.page-head h1{font-size:clamp(2.7rem,7vw,5.7rem);line-height:.92;margin:.12em 0}
+.page-head p{max-width:760px;color:var(--muted);font-size:1.05rem}
+.page-home-link{display:inline-flex;white-space:nowrap;text-decoration:none;border:1px solid var(--line);background:var(--paper);padding:11px 15px;border-radius:14px;font-weight:850}
+.places-toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:-7px 0 25px}
+.search-box{flex:1;min-width:260px;display:flex;align-items:center;gap:10px;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:0 14px;box-shadow:var(--shadow)}
+.search-box span{font-size:1.5rem;color:var(--muted)}
+.search-box input{width:100%;border:0;outline:0;background:transparent;color:var(--ink);font:inherit;padding:14px 0}
+.search-box input::placeholder{color:var(--muted)}
+.compact-action{padding:12px 14px;border-radius:14px;text-decoration:none;background:var(--aqua);color:var(--brand);font-weight:850}
+.search-empty{background:var(--sand);border-radius:18px;padding:20px;margin-bottom:20px;font-weight:800}
+.hero-buttons .btn{transition:transform .2s ease,box-shadow .2s ease}
+.hero-buttons .btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.2)}
+@media(max-width:860px){
+  .top-nav{display:none}
+  .page-head{padding-top:34px;align-items:flex-start;flex-direction:column}
+}
+@media(min-width:861px){
+  body{padding-bottom:20px}
+  .screen-nav{display:none}
+}

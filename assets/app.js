@@ -37,11 +37,39 @@ async function weather(){
     $('#uv').textContent=Math.round(d.daily.uv_index_max[0]);$('#sunset').textContent=d.daily.sunset[0].slice(11,16);
     $('#weatherText').textContent=(codes[d.current.weather_code]||'Aktuálne počasie')+'. Pri vysokom UV plánujte pamiatky ráno a oddych počas poludnia.';
     $('#weatherStatus').textContent='Aktualizované online';
-  }catch(e){$('#weatherStatus').textContent='Offline režim';}
+  }catch(e){if($('#weatherStatus'))$('#weatherStatus').textContent='Offline režim';}
 }
 weather();
 
 let deferredPrompt; const installBtn=$('#installBtn');
-window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;installBtn.hidden=false});
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;if(installBtn)installBtn.hidden=false});
 if(installBtn) installBtn.addEventListener('click',async()=>{if(!deferredPrompt)return;deferredPrompt.prompt();await deferredPrompt.userChoice;deferredPrompt=null;installBtn.hidden=true});
 if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./service-worker.js'));
+
+
+const placeSearch = $('#placeSearch');
+if (placeSearch) {
+  const cards = $$('.place-card');
+  const empty = $('#searchEmpty');
+  const normalize = value => value
+    .toLocaleLowerCase('sk')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '');
+
+  const runSearch = () => {
+    const query = normalize(placeSearch.value.trim());
+    let visible = 0;
+    cards.forEach(card => {
+      const matchesText = !query || normalize(card.textContent).includes(query);
+      const activeFilter = $('.filter.active')?.dataset.filter || 'all';
+      const matchesFilter = activeFilter === 'all' || card.dataset.group === activeFilter;
+      const show = matchesText && matchesFilter;
+      card.classList.toggle('hidden', !show);
+      if (show) visible++;
+    });
+    if (empty) empty.hidden = visible !== 0;
+  };
+
+  placeSearch.addEventListener('input', runSearch);
+  $$('.filter').forEach(button => button.addEventListener('click', runSearch));
+}

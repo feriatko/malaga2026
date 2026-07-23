@@ -1,16 +1,15 @@
-# Dovolenka – Costa del Sol
+# Dovolenka – Costa del Sol v7
 
-Moderná mobilná PWA pre rodinnú dovolenku v Benalmádene.
+Opravená a rozšírená PWA pre GitHub Pages.
 
-## Funkcie
-- živé počasie cez Open-Meteo,
-- podrobný program a rodinné alternatívy,
-- kostoly a odkazy na aktuálne omše,
-- fotografie a navigácie,
-- filtrovanie miest,
-- odškrtávanie navštíveného,
-- uložený checklist,
-- svetlý/tmavý režim,
-- offline základ aplikácie.
+Hlavné zmeny:
+- funkčná horná navigácia vrátane odkazu Miesta
+- pevná spodná mobilná navigácia
+- opravené odkazy z úvodnej obrazovky
+- samostatné obrazovky Domov, Program, Miesta, Jedlo a Praktické
+- vyhľadávanie medzi miestami
+- zvýraznenie aktuálnej obrazovky
+- nový cache názov pre správne načítanie aktualizácie
 
-Nahraj obsah ZIP balíka do koreňa GitHub repozitára a potvrď commit.
+Na GitHub nahrajte celý obsah ZIP archívu do koreňa repozitára.
+Po nasadení spravte tvrdé obnovenie stránky alebo odstráňte starú nainštalovanú PWA a pridajte ju znova.
