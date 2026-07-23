@@ -1,6 +1,6 @@
-const CACHE='dovolenka-costa-v4';
+const CACHE='dovolenka-costa-v6';
 const CORE=[
-'./','./index.html','./assets/style.css','./assets/app.js','./manifest.webmanifest',
+'./','./index.html','./prakticke.html','./jedlo.html','./miesta.html','./program.html','./assets/style.css','./assets/app.js','./manifest.webmanifest',
 './assets/icon-192.png','./assets/icon-512.png',
 './assets/images/hero.jpg','./assets/images/marina.jpg','./assets/images/park.jpg',
 './assets/images/colomares.jpg','./assets/images/cathedral.jpg','./assets/images/santiago.jpg',

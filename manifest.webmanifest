@@ -2,7 +2,7 @@
   "name": "Dovolenka – Costa del Sol",
   "short_name": "Dovolenka",
   "description": "Rodinný sprievodca Costa del Sol s programom, živým počasím a odškrtávaním navštívených miest.",
-  "start_url": "./",
+  "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "background_color": "#f5f7f4",
