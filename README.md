@@ -13,3 +13,10 @@ Hlavné zmeny:
 
 Na GitHub nahrajte celý obsah ZIP archívu do koreňa repozitára.
 Po nasadení spravte tvrdé obnovenie stránky alebo odstráňte starú nainštalovanú PWA a pridajte ju znova.
+
+
+## Verzia 8 Premium
+- Antigua Casa de Guardia zaradená do programu Málagy a označená ako highlight pre rodičov
+- rodinné odporúčania a skryté tipy na domovskej stránke
+- rozšírené praktické tipy: voda, toalety, rezervácie, horúčava, doprava, bezpečnosť a nákupy
+- aktualizovaný offline cache

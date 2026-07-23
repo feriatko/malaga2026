@@ -1,7 +1,7 @@
 {
   "name": "Dovolenka – Costa del Sol",
   "short_name": "Dovolenka",
-  "description": "Rodinný sprievodca Costa del Sol s programom, živým počasím a odškrtávaním navštívených miest.",
+  "description": "Prémiový rodinný sprievodca Costa del Sol s programom, odporúčaniami, praktickými tipmi, počasím a offline režimom.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

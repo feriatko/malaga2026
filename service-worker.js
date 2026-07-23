@@ -1,4 +1,4 @@
-const CACHE='dovolenka-costa-v7';
+const CACHE='dovolenka-costa-v8-premium';
 const CORE=[
 './','./index.html','./prakticke.html','./jedlo.html','./miesta.html','./program.html','./assets/style.css','./assets/app.js','./manifest.webmanifest',
 './assets/icon-192.png','./assets/icon-512.png',
